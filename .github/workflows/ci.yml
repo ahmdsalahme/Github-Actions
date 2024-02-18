@@ -1,0 +1,10 @@
+name: Demo Java App CI/CD
+on:
+  push:
+    branches: ["main"]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check Docker Version
+      run: docker version
