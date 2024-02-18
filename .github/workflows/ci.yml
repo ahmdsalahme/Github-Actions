@@ -35,4 +35,4 @@ jobs:
     - name: Update KubeConfig
       run: aws eks update-kubeconfig --name example
     - name: Deploy K8s Resource
-      run: kubectl apply -f k8s/deployment.yaml
+      run: kubectl apply -f k8s/.
