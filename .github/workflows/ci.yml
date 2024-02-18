@@ -10,3 +10,5 @@ jobs:
       uses: actions/checkout@v3
     - name: List Files
       run: ls -la
+    - name: Check Kubectl
+      run: kubectl version
