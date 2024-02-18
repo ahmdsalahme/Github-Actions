@@ -27,3 +27,7 @@ jobs:
       run: |
         docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
         docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
+    - name: Update KubeConfig
+      run: aws eks update-kubeconfig --name example
+    - name: Deploy K8s Resource
+      run: kubectl apply -f k8s/deployment.yaml

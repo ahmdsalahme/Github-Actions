@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: demo-jave-web-app
+  name: demo-jave-web-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-jave-web-app
+  template:
+    metadata:
+      labels:
+        app: demo-jave-web-app
+    spec:
+      containers:
+      - image: 352897893382.dkr.ecr.eu-north-1.amazonaws.com/library:demo-java-app-v1
+        name: app
+
